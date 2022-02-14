@@ -1,9 +1,10 @@
 import { Router } from 'express';
+import { createNoteController } from './useCases/CreateNote';
 
 const router = Router();
 
-router.get('/', (request, response) => {
-  response.json({ hello: 'world' });
+router.post('/note/create', (request, response) => {
+  return createNoteController.handle(request, response);
 });
 
 export { router };
