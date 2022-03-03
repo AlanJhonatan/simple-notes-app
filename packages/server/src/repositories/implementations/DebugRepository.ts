@@ -11,8 +11,10 @@ export class NoteRepository implements INoteRepository {
     throw new Error('Method not implemented.');
   }
 
-  async save(note: Note): Promise<void> {
+  async save(note: Note): Promise<Note> {
     console.log('repository .save');
+
+    return note;
   }
 
   update: Promise<void>;
