@@ -3,8 +3,8 @@ import { createNoteController } from './useCases/CreateNote';
 
 const router = Router();
 
-router.post('/note/create', (request, response) => {
-  return createNoteController.handle(request, response);
-});
+// router.get('/note/:noteId', readNoteController.handle);
+
+router.post('/note/create', (request, response) => createNoteController.handle);
 
 export { router };
